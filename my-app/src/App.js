@@ -32,7 +32,7 @@ render(){
         <button className="btn-election"  
         onClick={()=> {this.setState(
            {breakfast:menuBreakfast.map(el=> el.item),
-              lunch:[]
+              lunch:[] 
               }
               )
               }
