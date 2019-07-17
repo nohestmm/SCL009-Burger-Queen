@@ -18,64 +18,73 @@
         "item": "Jugo natural",
         "price": 700
     },
-
     {
-        "type": "Almuerzo y Cena",
-        "item": "Hamburguesa Simple",
-        "price": 1500,
-        "content": ["pollo", "carne", "vegetariana"],
-        "extras": [{
-                "item": "queso",
-                "price": "500"
-            },
-            {
-                "item": "huevo",
-                "price": "500"
-            }
-        ]
+        "type": "Almuerzo",
+        "item": "Hamburguesa Simple Pollo",
+        "price": 1500
+
     },
     {
-        "type": "Almuerzo y Cena",
-        "item": "Hamburguesa Doble",
-        "price": 2500,
-        "content": ["pollo", "carne", "vegetariana"],
-        "extras": [{
-                "item": "queso",
-                "price": "500"
-            },
-            {
-                "item": "huevo",
-                "price": "500"
-            }
-        ]
-    }, {
-        "type": "Almuerzo y Cena",
+        "type": "Almuerzo",
+        "item": "Hamburguesa Simple Carne",
+        "price": 1500
+
+    },
+    {
+        "type": "Almuerzo",
+        "item": "Hamburguesa Simple Vegetariana",
+        "price": 1500
+    },
+    {
+        "type": "Almuerzo",
+        "item": "Hamburguesa Doble Pollo",
+        "price": 2500
+
+    },
+    {
+        "type": "Almuerzo",
+        "item": "Hamburguesa Doble Carne",
+        "price": 2500
+
+    },
+    {
+        "type": "Almuerzo",
+        "item": "Hamburguesa Doble Vegetariana",
+        "price": 2500
+    },
+    {
+        "type": "Almuerzo",
         "item": "Papas fritas",
         "price": 500
     },
     {
-        "type": "Almuerzo y Cena",
+        "type": "Almuerzo",
         "item": "Onion Rings",
         "price": 500
     },
+
     {
-        "type": "Almuerzo y Cena",
+        "type": "Almuerzo",
         "item": "Agua 500ml",
         "price": 500
     },
+
     {
-        "type": "Almuerzo y Cena",
+        "type": "Almuerzo",
         "item": "Agua 750ml",
         "price": 800
     },
+
     {
-        "type": "Almuerzo y Cena",
+        "type": "Almuerzo",
         "item": "Gaseosa 500ml",
         "price": 700
     },
     {
-        "type": "Almuerzo y Cena",
+        "type": "Almuerzo",
         "item": "Gaseosa 750ml",
         "price": 1000
     }
+
+
 ]

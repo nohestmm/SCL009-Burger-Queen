@@ -9,12 +9,15 @@ import Total from './components/Total';
 import food from './food.json';
 
 const menuBreakfast = food.filter(el=> el.type === "Desayuno");
+const lunchs = food.filter(el => el.type==="Almuerzo");
 console.log(menuBreakfast);
+//console.log(lunch);
 class App extends React.Component {
  
    constructor() {
       super();
       this.state ={
+         
           breakfast:[],
           lunch:[] 
       }
@@ -31,13 +34,14 @@ render(){
         <div className="col-12 col-sm-8 col-md-10 col-lg-8 col-xl-8">
         <button className="btn-election"  
         onClick={()=> {this.setState(
-           {breakfast:menuBreakfast.map(el=> el.item),
-              lunch:[] 
+           {breakfast:menuBreakfast.map(el=>el), lunch:[]
               }
               )
               }
               }>Desayuno</button>
-        <button className="btn-election"  onClick={()=> {this.setState({lunch:[{optionFive:"Hamburguesa simple", optionSix:"Hamburguesa doble",optionSeven:"Papas fritas",optionEight:"Onion rings",optionNine:"Agua 500ml",optionTen:"Agua 750ml",optionEleven:"Bebida 500ml",optionTwelve:"Bebida 750ml"}],breakfast:[]})}}>Cena</button>
+        <button className="btn-election"  onClick={
+           ()=> {this.setState(
+              {lunch: lunchs.map (el =>el),breakfast:[]})}}>Cena</button>
         </div>
      </div>
         <div className="row justify-content-center">
@@ -45,7 +49,12 @@ render(){
                  {
           this.state.breakfast.map((bfast,index) =>{
               return(
-                 <ButtonBreakfast key={index} index={index} optionOne={bfast.optionOne} optionTwo={bfast.optionTwo} optionThree={bfast.optionThree} optionFour={bfast.optionFour}/>
+                 <ButtonBreakfast 
+                 key={index} 
+                 item={bfast.item} 
+                 price = {bfast.price}
+                 
+                />
               )
 
           })
@@ -54,7 +63,11 @@ render(){
         {
           this.state.lunch.map((lunch,index) =>{
               return(
-                 <ButtonLunchDinner key={index} index={index} optionFive={lunch.optionFive} optionSix={lunch.optionSix} optionSeven={lunch.optionSeven} optionEight={lunch.optionEight} optionNine={lunch.optionNine} optionTen={lunch.optionTen} optionEleven={lunch.optionEleven} optionTwelve={lunch.optionTwelve}/>
+                 <ButtonLunchDinner 
+                 key={index} 
+                 item={lunch.item} 
+                 price = {lunch.price}
+                 />
               )
 
           })

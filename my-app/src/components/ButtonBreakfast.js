@@ -17,10 +17,8 @@ const ButtonBreakfast =(props)=> {
  
   return (
         <div>
-          <button className="btn-breakfast">{props.optionOne}</button>
-          <button className="btn-breakfast">{props.optionTwo}</button>
-          <button className="btn-breakfast">{props.optionThree}</button>
-          <button className="btn-breakfast">{props.optionFour}</button>
+          <button className="btn-breakfast">{props.item}$ {props.price}</button>
+         
           </div>
           )
     
