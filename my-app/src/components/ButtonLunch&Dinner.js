@@ -1,10 +1,10 @@
 import React from 'react';
 
-const ButtonLunchDinner =(props)=> {
+const ButtonLunchDinner =({name,price})=> {
  
   return (
         <div>
-          <button className="btn-lunch">{props.item}${props.price}</button>
+          <button className="btn-lunch" >{name} ${price}</button>
 
           </div>
           )

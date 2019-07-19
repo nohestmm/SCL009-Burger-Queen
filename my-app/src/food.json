@@ -1,90 +1,77 @@
-[{
-        "type": "Desayuno",
-        "item": "Cafe americano",
-        "price": 500
-    },
-    {
-        "type": "Desayuno",
-        "item": "Cafe con leche",
-        "price": 700
-    },
-    {
-        "type": "Desayuno",
-        "item": "Sandwich de jamón y queso",
-        "price": 1000
-    },
-    {
-        "type": "Desayuno",
-        "item": "Jugo natural",
-        "price": 700
-    },
-    {
-        "type": "Almuerzo",
-        "item": "Hamburguesa Simple Pollo",
-        "price": 1500
+{
+    "Desayuno": [{
+            "name": "Café americano",
+            "price": 500
+        },
+        {
+            "name": "Café con leche",
+            "price": 700
+        },
+        {
+            "name": "Sandwich de jamón y queso",
+            "price": 1000
+        },
+        {
+            "name": "Jugo natural",
+            "price": 700
+        }
+    ],
+    "Almuerzo": [{
+            "name": "Hamburguesa simple de pollo",
+            "price": 1500
+        },
+        {
+            "name": "Hamburguesa simple de carne",
+            "price": 1500
+        },
+        {
+            "name": "Hamburguesa simple vegetariana",
+            "price": 1500
+        },
+        {
+            "name": "Hamburguesa doble de pollo",
+            "price": 2500
+        },
+        {
+            "name": "Hamburguesa doble de carne",
+            "price": 2500
+        },
+        {
+            "name": "Hamburguesa doble vegetariana",
+            "price": 2500
+        },
+        {
+            "name": "Extra huevo",
+            "price": 500
+        },
+        {
+            "name": "Extra queso",
+            "price": 500
+        },
+        {
+            "name": "Papas fritas",
+            "price": 500
+        },
+        {
+            "name": "Onion Rings",
+            "price": 500
+        },
+        {
+            "name": "Agua 500ml",
+            "price": 500
+        },
+        {
+            "name": "Agua 750ml",
+            "price": 700
+        },
+        {
+            "name": "Gaseosa 500ml",
+            "price": 700
+        },
+        {
+            "name": "Gaseosa 750ml",
+            "price": 1000
+        }
 
-    },
-    {
-        "type": "Almuerzo",
-        "item": "Hamburguesa Simple Carne",
-        "price": 1500
-
-    },
-    {
-        "type": "Almuerzo",
-        "item": "Hamburguesa Simple Vegetariana",
-        "price": 1500
-    },
-    {
-        "type": "Almuerzo",
-        "item": "Hamburguesa Doble Pollo",
-        "price": 2500
-
-    },
-    {
-        "type": "Almuerzo",
-        "item": "Hamburguesa Doble Carne",
-        "price": 2500
-
-    },
-    {
-        "type": "Almuerzo",
-        "item": "Hamburguesa Doble Vegetariana",
-        "price": 2500
-    },
-    {
-        "type": "Almuerzo",
-        "item": "Papas fritas",
-        "price": 500
-    },
-    {
-        "type": "Almuerzo",
-        "item": "Onion Rings",
-        "price": 500
-    },
-
-    {
-        "type": "Almuerzo",
-        "item": "Agua 500ml",
-        "price": 500
-    },
-
-    {
-        "type": "Almuerzo",
-        "item": "Agua 750ml",
-        "price": 800
-    },
-
-    {
-        "type": "Almuerzo",
-        "item": "Gaseosa 500ml",
-        "price": 700
-    },
-    {
-        "type": "Almuerzo",
-        "item": "Gaseosa 750ml",
-        "price": 1000
-    }
-
-
-]
+    ]
+}

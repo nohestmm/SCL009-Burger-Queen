@@ -13,11 +13,11 @@ function ButtonElectc(props) {
   );
 }
 */
-const ButtonBreakfast =(props)=> {
+const ButtonBreakfast =({name, price})=> {
  
   return (
         <div>
-          <button className="btn-breakfast">{props.item}$ {props.price}</button>
+          <button className="btn-breakfast">{name} ${price}</button>
          
           </div>
           )

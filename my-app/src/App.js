@@ -8,50 +8,67 @@ import ButtonLunchDinner from './components/ButtonLunch&Dinner';
 import Total from './components/Total';
 import food from './food.json';
 
-const menuBreakfast = food.filter(el=> el.type === "Desayuno");
-const lunchs = food.filter(el => el.type==="Almuerzo");
-console.log(menuBreakfast);
-//console.log(lunch);
+// const menuBreakfast = food.filter(el=> el.type === "Desayuno");
+// const lunchs = food.filter(el => el.type==="Almuerzo");
+// console.log(menuBreakfast);
+// console.log(lunchs);
 class App extends React.Component {
  
-   constructor() {
-      super();
+   constructor(props) {
+      super(props);
       this.state ={
-         
-          breakfast:[],
-          lunch:[] 
+          food,
+          menu:[]
       }
+this.showselectedDesayuno = this.showselectedDesayuno.bind(this);
+this.showselectedAlmuerzo = this.showselectedAlmuerzo.bind(this);     
       
     }
+
+showselectedDesayuno(){
+   this.setState({
+
+      menu: this.state.food.Desayuno
+   })
+}
+
+showselectedAlmuerzo(){
+   this.setState({
+
+      menu: this.state.food.Almuerzo
+   })
+}
+
 
 render(){
 
  return (
     <div className="App">
      
-              <Nav/>  
+              <Nav/> 
+
      <div className="row justify-content-end">
         <div className="col-12 col-sm-8 col-md-10 col-lg-8 col-xl-8">
         <button className="btn-election"  
-        onClick={()=> {this.setState(
-           {breakfast:menuBreakfast.map(el=>el), lunch:[]
-              }
-              )
-              }
-              }>Desayuno</button>
-        <button className="btn-election"  onClick={
-           ()=> {this.setState(
-              {lunch: lunchs.map (el =>el),breakfast:[]})}}>Cena</button>
+        onClick={this.showselectedDesayuno}>Desayuno</button>
+
+
+
+
+        <button className="btn-election"  
+        onClick={ this.showselectedAlmuerzo}>Cena</button>
         </div>
      </div>
+
+
         <div className="row justify-content-center">
            <div className="col-12 col-sm-8 col-md-10 col-lg-8 col-xl-10">
                  {
-          this.state.breakfast.map((bfast,index) =>{
+          this.state.menu.map((bfast,index) =>{
               return(
                  <ButtonBreakfast 
                  key={index} 
-                 item={bfast.item} 
+                 name={bfast.name} 
                  price = {bfast.price}
                  
                 />
@@ -61,11 +78,11 @@ render(){
        }
         
         {
-          this.state.lunch.map((lunch,index) =>{
+          this.state.menu.map((lunch,index) =>{
               return(
                  <ButtonLunchDinner 
                  key={index} 
-                 item={lunch.item} 
+                 name={lunch.name} 
                  price = {lunch.price}
                  />
               )
