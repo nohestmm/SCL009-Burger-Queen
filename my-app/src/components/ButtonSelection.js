@@ -1,4 +1,7 @@
 import React from 'react';
+import TableOrder from '../components/TableOrder'
+
+
 
 
 class ButtonSelection extends React.Component {
@@ -7,38 +10,52 @@ class ButtonSelection extends React.Component {
     super(props);
 
     this.state = {
-    selectionArray: "",
-    orderArray:[]
+     
+      selectionArray:"",
+      orderArray: []
     }
     this.addOrder = this.addOrder.bind(this)
+    
+    
   }
 
   addOrder(name, price){
 
-    this.setState({
-      selectionArray:{name: name,price:price}
-    })
-    if(this.state.selectionArray !== ""){
-    this.state.orderArray.push(this.state.selectionArray)
-    console.log(this.state.orderArray)
-    }
-    
+  this.setState({
+  selectionArray:{name: name,price:price}
+
+  })
+ 
   }
 
+ 
+
  render(){
+
+  if(this.state.selectionArray !== ""){
+    this.state.orderArray.push(this.state.selectionArray)
+    this.state.selectionArray = ""
+    
+    
+  }
+ 
+
+  
   return (
      <>
      {
-       this.props.newMenu.map((el, index) =>
-        <button key={index} className="btn-breakfast" onClick= {()=> this.addOrder(el.name, el.price)}>
+       this.props.newMenu.map((el, index) => 
+
+        <button key={index} className="btn-breakfast" onClick= {() =>this.addOrder(el.name, el.price)}>
             <p>{el.name} </p>
             <p>${el.price}</p>
           
           </button>
+        
        )
          
      }
-     <p>{console.log(this.state.selectionArray)}</p>
+     <TableOrder listorder = {this.state.orderArray} />
        </>
      
           );

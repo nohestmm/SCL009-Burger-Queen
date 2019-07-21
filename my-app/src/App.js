@@ -2,7 +2,7 @@ import React from 'react';
 import './App.css';
 import Nav from './components/Nav';
 import ButtonElect from './components/ButtonElect';
-import Total from './components/Total';
+
 
 
 class App extends React.Component {
@@ -11,7 +11,7 @@ class App extends React.Component {
   <>     
  <Nav/> 
  <ButtonElect />
- <Total />
+
 </>
     );
  }

@@ -5,7 +5,7 @@ import ButtonSelection from '../components/ButtonSelection'
 
 
 
-class ButtonElectc extends React.Component {
+class ButtonElection extends React.Component {
  
   constructor(props) {
     super(props);
@@ -13,15 +13,15 @@ class ButtonElectc extends React.Component {
         food,
         menu:[],
        
+       
     }
 this.menuselected = this.menuselected.bind(this);
 
-    
   }
 
 menuselected(option){
  this.setState({
-
+ 
     menu: this.state.food[option]
  })
 }
@@ -31,6 +31,8 @@ menuselected(option){
 
 
 render(){
+
+
 
 return (
   <>
@@ -68,4 +70,4 @@ return (
 
 
 
-export default ButtonElectc;
+export default ButtonElection;

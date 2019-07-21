@@ -1,7 +1,8 @@
 import React from 'react';
 
-const Total =(props)=> {
+class Total extends React.Component {
  
+  render(){
   return (
         <div className="total">
               <span>Total         $  </span>         
@@ -11,6 +12,5 @@ const Total =(props)=> {
     
   }
 
-
-
+}
 export default Total;
