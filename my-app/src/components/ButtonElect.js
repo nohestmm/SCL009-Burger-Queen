@@ -1,55 +1,66 @@
 import React from 'react';
-//import ButtonBreakfast from './ButtonBreakfast'
+import food from '../data/food.json'
+import ButtonSelection from '../components/ButtonSelection'
 
-/*
-function ButtonElectc(props) {
- 
-  return (
-   
-     <button className="btn-election" >{props.election}</button>
-     
-     
 
-  );
-}
-*/
-/*
+
+
 class ButtonElectc extends React.Component {
-  constructor() {
-    super();
-    this.handleClick = this.handleClick.bind(this);
+ 
+  constructor(props) {
+    super(props);
+    this.state ={
+        food,
+        menu:[],
+       
+    }
+this.menuselected = this.menuselected.bind(this);
+
     
   }
-  handleClick() {
-   
- 
 
-  }
-  
-  
-  render() {
-      return (
-        <button className="btn-election" onClick={this.handleClick}>{this.props.election}</button>
-      )
-  }
+menuselected(option){
+ this.setState({
+
+    menu: this.state.food[option]
+ })
 }
-*/
 
-class ButtonElectc extends React.Component {
- 
-  render() {
+
+
+
+
+render(){
+
+return (
+  <>
+  <div className="App">
    
+           
+   <div className="row justify-content-end">
+      <div className="col-12 col-sm-8 col-md-10 col-lg-8 col-xl-8">
+      <button className="btn-election" 
+      onClick={()=>this.menuselected("Desayuno")}>Desayuno</button>
+
+      <button className="btn-election"  
+      onClick={()=>this.menuselected("Almuerzo")}>Almuerzo</button>
+      </div>
+   </div>
+
+
      
-      return (
-        <div className="row justify-content-end">
-                 <div className="col-12 col-sm-8 col-md-10 col-lg-8 col-xl-8">
-        <button className="btn-election" >Desayuno</button>
-        <button className="btn-election" >Cena</button>
-     </div>
-     </div>
-     
-      )
-  }
+           {/* <div className="row justify-content-center">
+                 <div className="col-12 col-sm-8 col-md-10 col-lg-8 col-xl-10">
+                      <Total 
+                      />
+                 </div>
+           </div> */}
+  
+   </div>
+   <ButtonSelection newMenu={this.state.menu}/>
+</>
+);
+}
 }
 
 
