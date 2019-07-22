@@ -1,25 +1,11 @@
 import React from 'react';
 
-const TotalBreakfast =(props)=> {
+const TotalBreakfast =({name,price})=> {
  
   return (
         <div className="total">
              
-             
-              {
-          this.state.breakfast.map((bfast,index) =>{
-            if (bfast.optionOne){
-                 return(
-                   <div>
-                      <span>bfast.optionOne</span>
-                   </div>
-                 )
-
-            }  
-           
-
-          })
-       }
+            <span>{name}{price}  </span>
           </div>
           )
     
