@@ -8,16 +8,14 @@ class TableOrder extends React.Component {
     super(props);
 
     this.state = {
-     props
+        props
+   
     }
 
     // this.deleteOrder = this.deleteOrder.bind(this)
 }
-
-
-
     render(){
-        console.log(this.props.listorder)
+        
         return (
               
          <table>

@@ -26,14 +26,7 @@ menuselected(option){
  })
 }
 
-
-
-
-
 render(){
-
-
-
 return (
   <>
   <div className="App">
