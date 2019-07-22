@@ -8,13 +8,32 @@ class TableOrder extends React.Component {
     super(props);
 
     this.state = {
-        props
-   
+    order:props.listorder
+ 
     }
 
-    // this.deleteOrder = this.deleteOrder.bind(this)
+    this.deleteOrder = this.deleteOrder.bind(this)
+}
+
+deleteOrder(e){
+
+   this.state.order.forEach((el, index) =>{
+        if(this.state.order[index] === e){
+           delete this.state.order[index]
+
+        }
+   
+
+})
+
+this.setState({
+    order:this.state.order
+  })
+  console.log(this.state.order)
+
 }
     render(){
+     
         
         return (
               
@@ -22,11 +41,11 @@ class TableOrder extends React.Component {
                 <tbody>
                
                     {
-                    this.props.listorder.map((el,index)=>
-                    <tr key={index}>
+                    this.state.order.map((el,index)=>
+                   <tr key={index}>
                         <td>{el.name}</td>
                         <td>{el.price}</td>
-                        <td><button onClick = {()=> this.deleteOrder()}>X</button></td>
+                        <td><button onClick = {()=>this.deleteOrder(el)}>X</button></td>
                     </tr>
            )
         }
@@ -36,6 +55,7 @@ class TableOrder extends React.Component {
 
 
         )
+       
     }
 
 }
