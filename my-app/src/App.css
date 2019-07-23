@@ -82,3 +82,11 @@ body {
         transform: rotate(360deg);
     }
 }
+
+.firstcolumn {
+    width: 300px;
+}
+
+.thirdcolumn {
+    margin-left: 50px;
+}
