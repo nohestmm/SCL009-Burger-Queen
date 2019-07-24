@@ -1,19 +1,35 @@
 
-
-
-
-.home{
-  background-color: #fdc123;
+.to-order-list{
+  margin-top: 40rem;
+  margin-left: 40rem;
 }
 .navbar {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
   overflow: hidden;
   background-color: #fdc123;
   padding: 20px 5px;
-  transition: 0.4s;
   position: fixed;
   width: 100%;
   top: 0;
   z-index: 99;
+  font-family: 'Lobster', cursive;
+  font-size: 2rem;
+}
+.home h1{
+  
+  text-align: center;
+  margin: 1rem;
+  font-size: 4rem;
+  font-family: 'Lobster', cursive;
+  color: #e4d499;
+}
+.home p{
+  font-size: 2rem;
+  text-align: center;
+  font-family: 'Quicksand', sans-serif;
+  color: #303030;
 }
 .title{
   font-size: 3rem;
@@ -37,10 +53,7 @@ body{background-color: #059caf;}
 .App-link {
   color: #61dafb;
 }
-.total{
-  background-color: rgba(0, 0, 0, 0.3)
 
-}
 .btn-breakfast p{margin:0rem}
 .btn-breakfast,.btn-lunch{
   background-color: #e22450;
@@ -57,6 +70,7 @@ body{background-color: #059caf;}
   background-color: #f07b1c;
   text-align: center;
   margin: 1rem;
+  margin-top:7rem;
   padding: 1rem;
   padding-left: 2rem;
   padding-right: 2rem;
@@ -66,7 +80,40 @@ body{background-color: #059caf;}
   font-size: 1.3rem;
   cursor: pointer;
 }
-
+#logo{
+  margin-top: 8rem;
+}
+td{
+  font-family: 'Quicksand', sans-serif;
+  font-size: 1rem;
+  padding: 0.3rem;
+}
+table{
+  background-color:#e4d499;
+  border-collapse: collapse;
+  border-radius: 0.5rem;
+  overflow: hidden;
+  align-items: center;
+  justify-content: center;
+  
+}
+.btn-delete{
+  border-radius: 0.5rem;
+  border-width: 0px;
+  background-color: #e22424;
+}
+.btn-minus{
+  border-radius: 0.3rem;
+  border-width: 0px;
+  background-color: #f07b1c;
+  padding:0.2rem;
+}
+.btn-plus{
+  border-radius: 0.3rem;
+  border-width: 0px;
+  background-color: #059caf;
+  padding:0.2rem;
+}
 @keyframes App-logo-spin {
   from {
     transform: rotate(0deg);

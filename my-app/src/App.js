@@ -1,9 +1,10 @@
 import React from 'react';
-import { BrowserRouter as Router, Route, Link } from "react-router-dom";
+import { BrowserRouter as Router, Route, Link,NavLink }  from "react-router-dom";
 import ThemeHome from './components/ThemeHome'
 import ThemeKitchen from './components/ThemeKitchen'
 import ThemeOrder from './components/ThemeOrder'
-
+import './App.css';
+//import ButtonHome from '.components/ButtonHome'
 
 
 //import logo from './logo.svg';
@@ -17,21 +18,21 @@ import ThemeOrder from './components/ThemeOrder'
 function App () {
    return (
       <Router>
-        <div>
-          <ul>
-           
-            <li>
-              <Link to="/ThemeOrder">Orden</Link>
-            </li>
-            
-          </ul>
-  
-          <hr />
-  
-          <Route exact path="/" component={ ThemeHome } />
+        <div className='navbar'>
+      <NavLink to="/">
+						Inicio
+					</NavLink>
+					<NavLink exact to="/ThemeOrder" >
+						Orden
+					</NavLink>
+					<NavLink exact to="/themekitchen">
+						Cocina
+					</NavLink>
+
+      </div>
+      <Route exact path="/" component={ ThemeHome } />
           <Route path="/themeorder" component={ ThemeOrder } />
           <Route path="/themekitchen" component={ ThemeKitchen } />
-        </div>
       </Router>
     );
   

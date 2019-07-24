@@ -1,66 +1,72 @@
 import React from 'react';
 import TableOrder from '../components/TableOrder'
 
-
-
-
 class ButtonSelection extends React.Component {
- 
   constructor(props) {
     super(props);
-
     this.state = {
-     
-      selectionArray:"",
+      selectionArray: "",
       orderArray: []
     }
     this.addOrder = this.addOrder.bind(this)
-    
-    
   }
-
-  addOrder(name, price){
-
-  this.setState({
-  selectionArray:{name: name,price:price}
-
-  })
- 
+  addOrder(name, price) {
+    this.setState({
+      selectionArray: { name: name, price: price, quantity:1 }
+    })
   }
+  componentDidUpdate(prevProps, prevState) {
+    if (this.state.selectionArray !== prevState.selectionArray) {
+      if (this.state.selectionArray !== "") {
+// colocar el proceso si se repite el valor y anadir una propiedad a selectionArray
 
+if(this.state.orderArray.length){
+  
+
+}
+
+
+
+        this.state.orderArray.push(this.state.selectionArray);
+        this.setState({
+          selectionArray: ""
+        });
+      }
+    }
+  }
  
 
  render(){
 
-  if(this.state.selectionArray !== ""){
-    this.state.orderArray.push(this.state.selectionArray)
-    this.state.selectionArray = ""
-    
-    
-  }
- 
-
-  
-  return (
+ return (
      <>
    
-   <div className="row justify-content-center">
+   <div className="row">
       <div className="col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12">
-     {
-       this.props.newMenu.map((el, index) => 
+           <div className="row ">
+                 <div className="col-6 col-sm-6 col-md-7">
+                {
+                 this.props.newMenu.map((el, index) => 
 
-        <button key={index} className="btn-breakfast" onClick= {() =>this.addOrder(el.name, el.price)}>
-            <p>{el.name} </p>
-            <p>${el.price}</p>
+               <button key={index} className="btn-breakfast" onClick= {() =>this.addOrder(el.name, el.price)}>
+                  <p>{el.name} </p>
+                  <p>${el.price}</p>
           
-          </button>
+                   </button>
         
-       )
+                     )
          
-     }
+                  }
+                </div>
+                <div className="col-6 col-sm-6 col-md-5">
+                <TableOrder listorder = {this.state.orderArray} />
+
+                </div>
+          
+           </div>
     </div>
     </div>
-     <TableOrder listorder = {this.state.orderArray} />
+     
        </>
      
           );
