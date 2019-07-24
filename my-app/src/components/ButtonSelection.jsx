@@ -1,17 +1,25 @@
 import React from 'react';
 import TableOrder from '../components/TableOrder'
+import Total from '../components/Total'
 
 class ButtonSelection extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
       selectionArray: "",
-      orderArray: []
+      orderArray: [],
+      total:0
+      
     }
     this.addOrder = this.addOrder.bind(this)
   }
+
+
   addOrder(name, price) {
+    
+
     this.setState({
+     
       selectionArray: { name: name, price: price, quantity:1 }
     })
   }
@@ -24,9 +32,6 @@ if(this.state.orderArray.length){
   
 
 }
-
-
-
         this.state.orderArray.push(this.state.selectionArray);
         this.setState({
           selectionArray: ""
@@ -34,18 +39,23 @@ if(this.state.orderArray.length){
       }
     }
   }
+
+
+  
   render() {
     return (
       <>
         {
           this.props.newMenu.map((el, index) =>
-            <button key={index} className="btn-breakfast" onClick={() => this.addOrder(el.name, el.price)}>
+            <button key={index} className="btn-breakfast" onClick={() => this.addOrder(el.name, el.price, this.state.total)}>
               <p>{el.name} </p>
               <p>${el.price}</p>
             </button>
           )
         }
         <TableOrder listorder={this.state.orderArray} />
+     
+     
       </>
     );
   }
