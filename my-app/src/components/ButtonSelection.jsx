@@ -14,15 +14,26 @@ class ButtonSelection extends React.Component {
     // this.addquantity = this.addquantity.bind(this)
     
   }
+  addOrder(name,price) {
 
+    const found = this.state.orderArray.some(el => el.name === name)
+    console.log(found);
 
-
-
-  addOrder(el) {
-
-  let selectionArray = {name: el.name, price: el.price, quantity: 1, total: el.price}
-
+    if(found){
+      this.state.orderArray.some(el=>{
+        if(el.name === name){
+     el.quantity++;}
+  return el.quantity
+    })
+   
+  }
+if(!found){
+  let selectionArray = {name: name, price: price, quantity: 1, total: price}
   this.state.orderArray.push(selectionArray)
+}
+  
+
+
 console.log(this.state.orderArray)
  
   
@@ -37,7 +48,7 @@ console.log(this.state.orderArray)
       <>
         {
           this.props.newMenu.map((el, index) =>
-            <button key={index} className="btn-breakfast" onClick={() => this.addOrder(el)}>
+            <button key={index} className="btn-breakfast" onClick={() => this.addOrder(el.name, el.price)}>
               <p>{el.name} </p>
               <p>${el.price}</p>
             </button>
