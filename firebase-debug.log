@@ -1,0 +1,38 @@
+[debug] [2019-07-10T17:39:50.047Z] ----------------------------------------------------------------------
+[debug] [2019-07-10T17:39:50.050Z] Command:       C:\Program Files\nodejs\node.exe C:\Users\Javiera\AppData\Roaming\npm\node_modules\firebase-tools\lib\bin\firebase.js login
+[debug] [2019-07-10T17:39:50.051Z] CLI Version:   7.0.2
+[debug] [2019-07-10T17:39:50.051Z] Platform:      win32
+[debug] [2019-07-10T17:39:50.051Z] Node Version:  v10.15.3
+[debug] [2019-07-10T17:39:50.052Z] Time:          Wed Jul 10 2019 13:39:50 GMT-0400 (GMT-04:00)
+[debug] [2019-07-10T17:39:50.052Z] ----------------------------------------------------------------------
+[debug] 
+[info] 
+[info] Visit this URL on any device to log in:
+[info] https://accounts.google.com/o/oauth2/auth?client_id=563584335869-fgrhgmd47bqnekij5i8b5pr03ho849e6.apps.googleusercontent.com&scope=email%20openid%20https%3A%2F%2Fwww.googleapis.com%2Fauth%2Fcloudplatformprojects.readonly%20https%3A%2F%2Fwww.googleapis.com%2Fauth%2Ffirebase%20https%3A%2F%2Fwww.googleapis.com%2Fauth%2Fcloud-platform&response_type=code&state=492310441&redirect_uri=http%3A%2F%2Flocalhost%3A9005
+[info] 
+[info] Waiting for authentication...
+[debug] [2019-07-10T17:39:56.976Z] Error: spawn cmd ENOENT
+    at Process.ChildProcess._handle.onexit (internal/child_process.js:240:19)
+    at onErrorNT (internal/child_process.js:415:16)
+    at process._tickCallback (internal/process/next_tick.js:63:19)
+[error] 
+[error] Error: An unexpected error has occurred.
+[debug] [2019-07-10T18:07:40.882Z] ----------------------------------------------------------------------
+[debug] [2019-07-10T18:07:40.886Z] Command:       C:\Program Files\nodejs\node.exe C:\Users\Javiera\AppData\Roaming\npm\node_modules\firebase-tools\lib\bin\firebase.js login --interactive
+[debug] [2019-07-10T18:07:40.887Z] CLI Version:   7.0.2
+[debug] [2019-07-10T18:07:40.887Z] Platform:      win32
+[debug] [2019-07-10T18:07:40.887Z] Node Version:  v10.15.3
+[debug] [2019-07-10T18:07:40.888Z] Time:          Wed Jul 10 2019 14:07:40 GMT-0400 (GMT-04:00)
+[debug] [2019-07-10T18:07:40.888Z] ----------------------------------------------------------------------
+[debug] 
+[info] 
+[info] Visit this URL on any device to log in:
+[info] https://accounts.google.com/o/oauth2/auth?client_id=563584335869-fgrhgmd47bqnekij5i8b5pr03ho849e6.apps.googleusercontent.com&scope=email%20openid%20https%3A%2F%2Fwww.googleapis.com%2Fauth%2Fcloudplatformprojects.readonly%20https%3A%2F%2Fwww.googleapis.com%2Fauth%2Ffirebase%20https%3A%2F%2Fwww.googleapis.com%2Fauth%2Fcloud-platform&response_type=code&state=577793012&redirect_uri=http%3A%2F%2Flocalhost%3A9005
+[info] 
+[info] Waiting for authentication...
+[debug] [2019-07-10T18:07:44.485Z] Error: spawn cmd ENOENT
+    at Process.ChildProcess._handle.onexit (internal/child_process.js:240:19)
+    at onErrorNT (internal/child_process.js:415:16)
+    at process._tickCallback (internal/process/next_tick.js:63:19)
+[error] 
+[error] Error: An unexpected error has occurred.

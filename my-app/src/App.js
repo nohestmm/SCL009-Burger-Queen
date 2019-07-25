@@ -1,26 +1,37 @@
 import React from 'react';
-import logo from './logo.svg';
 import './App.css';
+import Nav from './components/Nav';
+import ButtonElection from './components/ButtonElect';
+import { configure} from 'enzyme';
+import Adapter from 'enzyme-adapter-react-16'
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+class App extends React.Component {
+   render() {
+      return (
+         <>
+            <Nav />
+            <ButtonElection />
+         </>
+      );
+   }
 }
 
+
+/*
+ function App() {
+ 
+return (
+    <div className="App">
+     
+       <Nav/>  
+      <ButtonElect/>
+     </div>
+
+  );
+}
+*/
+
+
+
 export default App;
+
