@@ -5,21 +5,31 @@ class Total extends React.Component {
     super(props);
 
     this.state={
- 
+      value: ''
     }
+    this.handleChange = this.handleChange.bind(this);
+  }
+  handleChange(event) {
+    this.setState({value: event.target.value});
+    console.log(this.state.value)
   }
   render() {
 
 
     return (
-<div className="total">
+<>
+
+<div>
      
        
-        <span>{`Total          ${this.props.total}`}$</span>
-        <button className="">Enviar a cocina</button>
-      
-      
-     </div>
+        <span className="total">{`Total          ${this.props.total}`}$</span>
+        
+       
+      </div>
+       <div>
+       <button className="btn-total">Enviar a cocina</button>  <input className="input" value={this.state.value} type="text" onChange={this.handleChange} placeholder="Nombre cliente"></input>
+       </div>
+       </>
     )
 
   }

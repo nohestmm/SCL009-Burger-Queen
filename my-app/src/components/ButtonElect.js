@@ -20,7 +20,7 @@ class ButtonElection extends React.Component {
       <>
         <div className="App">
           <div className="row justify-content-end">
-            <div className="col-12 col-sm-8 col-md-10 col-lg-8 col-xl-8">
+            <div className="col-12 col-sm-8 col-md-9 col-lg-8 col-xl-8">
               <button className="btn-election"
                 onClick={() => this.menuselected("Desayuno")}>Desayuno</button>
               <button className="btn-election"
