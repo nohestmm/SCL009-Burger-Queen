@@ -8,7 +8,7 @@ class TableOrder extends React.Component {
     super(props);
     this.state = {
       order: props.listorder,
-      total: 0,
+      suma: 0,
      
     }
     this.deleteOrder = this.deleteOrder.bind(this)
@@ -19,12 +19,12 @@ class TableOrder extends React.Component {
   }
 
   sumar(suma) {
-    let totalsuma = 0
-    suma = this.state.order.map(el => el.total)
-    if (suma.length) {
-      totalsuma = suma.reduce((a, b) => a + b)
+    
+    let arraySuma = this.state.order.map(el => el.total)
+    if (arraySuma.length) {
+      suma = arraySuma.reduce((a, b) => a + b)
     }
-    return totalsuma
+    return suma
   }
 
 
@@ -38,7 +38,7 @@ class TableOrder extends React.Component {
     this.setState({
       order: this.state.order
     })
-    console.log(this.state.order)
+    
   }
   addQuantity(element) {
  
@@ -49,7 +49,7 @@ class TableOrder extends React.Component {
       order: this.state.order
 
     })
-    console.log(this.state.order)
+   
   }
 
   deleteQuantity(element) {
@@ -65,7 +65,7 @@ class TableOrder extends React.Component {
 
   }
 
- newprice(element){
+newprice(element){
    
 element.total = element.price * element.quantity
 
@@ -96,7 +96,7 @@ return element.total
             }
           </tbody>
         </table>
-        <Total total={this.sumar(this.state.total)} />
+        <Total total={this.sumar(this.state.suma)} />
       </>
     )
   }
