@@ -8,30 +8,21 @@ class ButtonSelection extends React.Component {
     this.state = {
       selectionArray: "",
       orderArray: [],
-      total:0
       
     }
     this.addOrder = this.addOrder.bind(this)
   }
-
-
   addOrder(name, price) {
-    
-
     this.setState({
-     
-      selectionArray: { name: name, price: price, quantity:1 }
+      selectionArray: { name: name, price: price, quantity: 1, total: price}
     })
   }
   componentDidUpdate(prevProps, prevState) {
     if (this.state.selectionArray !== prevState.selectionArray) {
       if (this.state.selectionArray !== "") {
-// colocar el proceso si se repite el valor y anadir una propiedad a selectionArray
-
-if(this.state.orderArray.length){
-  
-
-}
+        // colocar el proceso si se repite el valor y anadir una propiedad a selectionArray
+        if (this.state.orderArray.length) {
+        }
         this.state.orderArray.push(this.state.selectionArray);
         this.setState({
           selectionArray: ""
@@ -39,10 +30,7 @@ if(this.state.orderArray.length){
       }
     }
   }
-
-
-  
-  render() {
+ render() {
     return (
       <>
         {
@@ -53,9 +41,9 @@ if(this.state.orderArray.length){
             </button>
           )
         }
-        <TableOrder listorder={this.state.orderArray} />
-     
-     
+        <TableOrder listorder={this.state.orderArray}/>
+
+
       </>
     );
   }

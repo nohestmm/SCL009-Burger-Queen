@@ -1,7 +1,6 @@
 import React from 'react';
 import food from '../data/food.json'
 import ButtonSelection from '../components/ButtonSelection'
-
 class ButtonElection extends React.Component {
   constructor(props) {
     super(props);
