@@ -3,6 +3,7 @@ import Total from '../components/Total'
 
 
 
+
 class TableOrder extends React.Component {
   constructor(props) {
     super(props);
@@ -86,17 +87,17 @@ return element.total
                   <td className="firstcolumn">{element.name}</td>
                   <td>{ this.newprice(element)}</td>
                   <td >
-                    <button className="thirdcolumn" onClick={() => this.addQuantity(element)}>+</button>
+                    <button className="btn-plus" onClick={() => this.addQuantity(element)}>+</button>
                     {element.quantity}
-                    <button onClick={() => this.deleteQuantity(element)}>-</button></td>
-                  <td><button className="thirdcolumn" onClick={() => this.deleteOrder(element)}>X</button></td>
+                    <button className="btn-minus" onClick={() => this.deleteQuantity(element)}>-</button></td>
+                  <td><button className="btn-delete" onClick={() => this.deleteOrder(element)}>X</button></td>
 
                 </tr>
               )
             }
           </tbody>
         </table>
-        <Total total={this.sumar(this.state.suma)} />
+        <Total total={this.sumar(this.state.suma)} order={this.state.order} />
       </>
     )
   }
