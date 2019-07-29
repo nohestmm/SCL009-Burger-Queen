@@ -8,19 +8,19 @@ self.__precacheManifest = [
     "url": "/SCL009-Burger-Queen/static/js/runtime~main.bfb50733.js"
   },
   {
-    "revision": "4d5fcf8e86e3db087289",
-    "url": "/SCL009-Burger-Queen/static/js/main.7585e386.chunk.js"
+    "revision": "ba8cb8219ee2fb288664",
+    "url": "/SCL009-Burger-Queen/static/js/main.da2b8503.chunk.js"
   },
   {
     "revision": "1a602e62b02c780dd19d",
     "url": "/SCL009-Burger-Queen/static/js/2.d29af87b.chunk.js"
   },
   {
-    "revision": "4d5fcf8e86e3db087289",
+    "revision": "ba8cb8219ee2fb288664",
     "url": "/SCL009-Burger-Queen/static/css/main.c9dc73e4.chunk.css"
   },
   {
-    "revision": "2d253e3ad6ed1e993f70385cb77ec196",
+    "revision": "cf69c4c400704fea3f69e286558766f9",
     "url": "/SCL009-Burger-Queen/index.html"
   }
 ];
