@@ -69,7 +69,7 @@ btnOrder.addEventListener('click',() =>{
        <div>
        <button className="btn-total" id="btn-send-order">Enviar a cocina</button> 
              <input className="input" value={this.state.client} type="text" onChange={this.handleChange} placeholder="Nombre cliente"></input>
-            n> 
+          
        </div>
        </>
     )
