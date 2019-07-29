@@ -17,7 +17,7 @@ class ButtonSelection extends React.Component {
   addOrder(name,price) {
   //asignar el elemento a found
     const found = this.state.orderArray.some(el => el.name === name)
-    console.log(found);
+    
 //si lo encontro aumentar la cantidad de ese elemento
     if(found){
       this.state.orderArray.forEach(el =>{
@@ -35,7 +35,7 @@ if(!found){
   
 
 
-console.log(this.state.orderArray)
+
  
   
     
