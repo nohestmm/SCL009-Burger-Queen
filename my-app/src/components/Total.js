@@ -9,19 +9,34 @@ class Total extends React.Component {
     super(props);
 
     this.state={
-      client: ''
+      client: '',
+      orderFinal: props.order
+      
     }
     this.handleChange = this.handleChange.bind(this);
+    this.deleteOrder = this.deleteOrder.bind(this);
   }
   handleChange(event) {
     
     this.setState({client: event.target.value});
+
     
   }
+deleteOrder(order){
+
+console.log(order)
+  this.setState({
+  orderFinal: ''
+  });
+
+
+}
+
 
  
 componentDidMount(){
 let btnOrder = document.getElementById("btn-send-order");
+
 
 
 btnOrder.addEventListener('click',() =>{
@@ -51,6 +66,9 @@ btnOrder.addEventListener('click',() =>{
   }
 
 })
+
+
+
 }
 
   render() {
@@ -69,7 +87,7 @@ btnOrder.addEventListener('click',() =>{
        <div>
        <button className="btn-total" id="btn-send-order">Enviar a cocina</button> 
              <input className="input" value={this.state.client} type="text" onChange={this.handleChange} placeholder="Nombre cliente"></input>
-          
+             <button className="btn-total" onClick={()=>this.deleteOrder(this.state.orderFinal)}>Eliminar Orden</button> 
        </div>
        </>
     )

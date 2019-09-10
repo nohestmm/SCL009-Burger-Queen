@@ -32,14 +32,6 @@ if(!found){
   let selectionArray = {name: name, price: price, quantity: 1, total: price}
   this.state.orderArray.push(selectionArray)
 }
-  
-
-
-
- 
-  
-    
-    
     this.setState({
       orderArray:  this.state.orderArray
     })
